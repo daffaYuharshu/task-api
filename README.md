@@ -258,3 +258,31 @@ Ini merupakan sebuah API yang menyediakan fungsi task dalam aplikasi AIANG
       Unauthorized
     }
     ```
+    
+## Recommendation Task
+- **Metode** : GET
+- **Headers** : Authorization Bearer Token
+- **URL** : **/prediction/tasks**
+- **Response Body** :
+  ```json
+  {
+    "Prediction Task": "ikut organisasi"
+  }
+  ```
+
+- Jika token salah atau tidak sesuai, server akan mengembalikan respons :
+  - **Status Code** : 403
+  - **Response Body** :
+    ```json
+    {
+      Forbidden
+    }
+    ```
+- Jika token kosong, server akan mengembalikan respons :
+  - **Status Code** : 401
+  - **Response Body** :
+    ```json
+    {
+      Unauthorized
+    }
+    ```
